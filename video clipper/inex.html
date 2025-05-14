@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Video Clipper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Video Clipper</h1>
+    <div class="input-group">
+      <label for="youtube-url">YouTube Video URL:</label>
+      <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..." />
+    </div>
+    <div class="options-group">
+      <label for="clip-length">Clip Length (seconds):</label>
+      <select id="clip-length">
+        <option value="15">15 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="60">60 seconds</option>
+      </select>
+    </div>
+    <button id="process-btn">Generate Clips</button>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <p>Processing video...</p>
+    </div>
+
+    <div id="error-message" class="error" style="display: none;"></div>
+    <div id="clips-container" class="clips-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
